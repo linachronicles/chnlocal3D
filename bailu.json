@@ -1,0 +1,77 @@
+{
+	"default": {
+		"author": "Peter Bol & Michael Szonyi",
+		"firstScene": "bailu_shan_road",
+		"sceneFadeDuration": 2000,
+		"autoLoad": true,
+		"fallback": "",
+		"northOffset": -20,
+		"minPitch": -35,
+		"maxPitch": 35,
+		"hotSpotDebug": true,
+		"compass": true
+	},
+
+	"default_extras": {
+		"firstScene": "Road to Bailu",
+		"hotSpotDebug": true,
+    "compass": true
+  },
+
+	"scenes": {
+		"bailu_shan_road": {
+			"title": "(A) Road to Bailu",
+			"type": "multires",
+			"multiRes": {
+					"basePath": "panos/bailu/bailu_shan_road",
+					"path": "/%l/%s%y_%x",
+					"fallbackPath": "/fallback/%s",
+					"extension": "jpg",
+					"tileResolution": 512,
+					"maxLevel": 4,
+					"cubeResolution": 2224
+			},
+			"panoNorthOffSet": 180,
+			"yaw": -77,
+			"map": {
+				"position": "120,590"
+			},
+			"hotSpots": [
+				{
+					"pitch": -15,
+					"yaw": 33,
+					"type": "scene",
+					"text": "(B) Hujiao Zen",
+					"sceneId": "bailu_mountain_Hu_Jiao_Zen"
+				}
+			]
+		},
+		"bailu_mountain_Hu_Jiao_Zen": {
+			"title": "(B) Hujiao Zen",
+			"type": "multires",
+			"multiRes": {
+					"basePath": "panos/bailu/bailu_mountain_Hu_Jiao_Zen",
+					"path": "/%l/%s%y_%x",
+					"fallbackPath": "/fallback/%s",
+					"extension": "jpg",
+					"tileResolution": 512,
+					"maxLevel": 4,
+					"cubeResolution": 2224
+			},
+			"panoNorthOffSet": 180,
+			"yaw": -77,
+			"map": {
+				"position": "120,590"
+			},
+			"hotSpots": [
+				{
+					"pitch": -15,
+					"yaw": 33,
+					"type": "scene",
+					"text": "(A) Road to Bailu",
+					"sceneId": "bailu_shan_road"
+				}
+				]
+			}
+		}
+	}
